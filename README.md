@@ -15,6 +15,7 @@
   - [使用步骤](#使用步骤)
     -[Android](#Android)
     -[iOS](#iOS)
+  - [项目参考](#项目参考)
 - [总结](#总结)
 - [TODO](#TODO)
 
@@ -262,6 +263,15 @@ BaiduSecretKey      = "*****************"
 cd cmd
 go run main.go
 ```
+
+## 项目参考
+
+  - [MillionHeroAssistant](https://github.com/smileboywtu/MillionHeroAssistant) (python)
+  - [TopSup](https://github.com/Skyexu/TopSup) (python)
+  - [wenda-helper](https://github.com/rrdssfgcs/wenda-helper) (python)
+  - [qanswer](https://github.com/silenceper/qanswer) (golang)
+
+本项目在开发过程中参考了以上开源项目，在此对开源作者表示感谢！
 
 ## 总结
 
