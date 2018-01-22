@@ -16,7 +16,6 @@
     -[Android](#Android)
     -[iOS](#iOS)
   - [项目参考](#项目参考)
-- [总结](#总结)
 - [TODO](#TODO)
 
 ## 特点
@@ -35,6 +34,7 @@
   - 加入搜狗汪仔答题助手的结果
 - 2018.01.20
   - 改进 ABD 手机截屏获取方式，提高速度
+  - 增加 Android 自动答题功能
   - 题目和选项一次截取识别
 - 2018.01.18
   - 增加知识图谱结果
@@ -266,16 +266,12 @@ go run main.go
 
 ## 项目参考
 
+  - [qanswer](https://github.com/silenceper/qanswer) (golang)
   - [MillionHeroAssistant](https://github.com/smileboywtu/MillionHeroAssistant) (python)
   - [TopSup](https://github.com/Skyexu/TopSup) (python)
   - [wenda-helper](https://github.com/rrdssfgcs/wenda-helper) (python)
-  - [qanswer](https://github.com/silenceper/qanswer) (golang)
 
 本项目在开发过程中参考了以上开源项目，在此对开源作者表示感谢！
-
-## 总结
-
-
 
 ## TODO
 

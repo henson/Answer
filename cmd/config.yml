@@ -1,0 +1,55 @@
+# 西瓜视频 夜神模拟器
+debug: false
+# 游戏名称, xigua西瓜视频/cddh冲顶大会/huajiao花椒/zscr芝士超人
+app: xigua
+# 是否模拟自动答题
+automatic: false
+# 对应的设备类型：ios or android
+device: android
+# android 连接地址
+# 若为安卓真机，打开 USB 调试模式，终端输入 adb devices ，显示设备号则表示成功，如下例子：
+# List of devices attached
+# 6934dc33    device
+# adb_address 处填入设备号
+# 若为模拟器，则填入连接地址
+# 夜神模拟器 127.0.0.1:62001
+# 逍遥模拟器 127.0.0.1:21503
+adb_address: '127.0.0.1:62001'
+# ios 设备连接wda的地址
+wda_address: '127.0.0.1:8100'
+# 西瓜视频裁剪区域：x,y,w,h
+xg_q_x: 30
+xg_q_y: 240
+xg_q_w: 840
+xg_q_h: 180
+xg_a_x: 30
+xg_a_y: 410
+xg_a_w: 840
+xg_a_h: 450
+# 冲顶大会
+cd_q_x: 30
+cd_q_y: 280
+cd_q_w: 840
+cd_q_h: 120
+cd_a_x: 30
+cd_a_y: 400
+cd_a_w: 840
+cd_a_h: 380
+# 芝士超人
+zs_q_x: 30
+zs_q_y: 240
+zs_q_w: 840
+zs_q_h: 180
+zs_a_x: 30
+zs_a_y: 380
+zs_a_w: 840
+zs_a_h: 410
+# 花椒直播
+hj_q_x: 30
+hj_q_y: 240
+hj_q_w: 840
+hj_q_h: 180
+hj_a_x: 30
+hj_a_y: 410
+hj_a_w: 840
+hj_a_h: 450
