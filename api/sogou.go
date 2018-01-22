@@ -10,11 +10,13 @@ import (
 	"github.com/parnurzeal/gorequest"
 )
 
+//Sogos 搜狗json解析类型
 type Sogos struct {
 	Code   int     `json:"code"`
 	Result []Reply `json:"result"`
 }
 
+//Reply 类型
 type Reply struct {
 	Answers     []string     `json:"answers"`
 	CDID        string       `json:"cd_id"`
@@ -28,12 +30,14 @@ type Reply struct {
 	UID         string       `json:"uid"`
 }
 
+//Searchinfo 类型
 type Searchinfo struct {
 	Summary string `json:"summary"`
 	Title   string `json:"title"`
 	URL     string `json:"url"`
 }
 
+//Sogou 获取搜狗的结果
 func Sogou(app string) {
 	c := util.GetCache()
 	c.Set(util.QuestionInCache, "first init", time.Duration(60)*time.Second)

@@ -2,6 +2,7 @@ package util
 
 import "strings"
 
+//UnicodeIndex 获取中文字符位置
 func UnicodeIndex(str, substr string) int {
 	// 子串在字符串的字节位置
 	result := strings.Index(str, substr)
@@ -17,6 +18,7 @@ func UnicodeIndex(str, substr string) int {
 	return result
 }
 
+//SubString 截取中文字符串
 func SubString(str string, begin, length int) (substr string) {
 	// 将字符串的转换成[]rune
 	rs := []rune(str)
