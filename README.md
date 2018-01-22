@@ -277,3 +277,6 @@ go run main.go
 ## TODO
 
 - 对题目进行分类，建立题型库，针对不同题型采取不同的处理方法
+
+
+![Go Report Card](https://goreportcard.com/badge/github.com/henson/Answer)
