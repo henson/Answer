@@ -100,7 +100,7 @@ func answerQuestion(sc Screenshot, cfg *util.Config) {
 	go func() {
 		defer wig.Done()
 		//answerText, err := baiduOCR().GetText(util.AnswerImage)
-		answerText, err := baiduOCR().GetText(<-imgChan2)
+		answerText, err := baiduOCR(cfg).GetText(<-imgChan2)
 		if err != nil {
 			log.Errorf("识别答案失败，%v", err.Error())
 			return

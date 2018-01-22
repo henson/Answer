@@ -9,8 +9,6 @@ const (
 	AnswerImage   = ImagePath + "answer.png"
 
 	BaiduAccessTokenKey = "qanswer_baidu_access_token"
-	BaiduAPIKey         = "**************************"
-	BaiduSecretKey      = "**************************"
 
 	QuestionInCache = "something else"
 )

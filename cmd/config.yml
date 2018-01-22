@@ -17,6 +17,9 @@ device: android
 adb_address: '127.0.0.1:62001'
 # ios 设备连接wda的地址
 wda_address: '127.0.0.1:8100'
+# 百度OCR API参数
+Baidu_API_Key: "*****************************"
+Baidu_Secret_Key: "**************************"
 # 西瓜视频裁剪区域：x,y,w,h
 xg_q_x: 30
 xg_q_y: 240

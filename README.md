@@ -246,11 +246,12 @@ xg_a_h: 450
 
   2. 填入百度 OCR key
 
-打开 util 目录下 const.go 文件，修改如下参数：
+修改参数：
 
 ```
-BaiduAPIKey         = "*****************"
-BaiduSecretKey      = "*****************"
+# 百度OCR API参数
+Baidu_API_Key: "**************************"
+Baidu_Secret_Key: "**************************"
 ```
 
   3. 程序运行：

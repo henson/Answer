@@ -9,12 +9,14 @@ import (
 
 //Config 全局配置
 type Config struct {
-	Debug      bool   `yaml:"debug"`
-	APP        string `yaml:"app"`
-	Auto       bool   `yaml:"automatic"`
-	Device     string `yaml:"device"`
-	AdbAddress string `yaml:"adb_address"`
-	WdaAddress string `yaml:"wda_address"`
+	Debug          bool   `yaml:"debug"`
+	APP            string `yaml:"app"`
+	Auto           bool   `yaml:"automatic"`
+	Device         string `yaml:"device"`
+	AdbAddress     string `yaml:"adb_address"`
+	WdaAddress     string `yaml:"wda_address"`
+	BaiduAPIKey    string `yaml:"Baidu_API_Key"`
+	BaiduSecretKey string `yaml:"Baidu_Secret_Key"`
 
 	//西瓜视频截图题目位置
 	XgQx int `yaml:"xg_q_x"`

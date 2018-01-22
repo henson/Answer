@@ -8,7 +8,6 @@ import (
 	"sync"
 	"time"
 
-	
 	"github.com/henson/Answer/util"
 )
 
@@ -34,10 +33,10 @@ type wordsResults struct {
 }
 
 //NewBaidu new
-func NewBaidu() *Baidu {
+func NewBaidu(cfg *util.Config) *Baidu {
 	baidu := new(Baidu)
-	baidu.apiKey = util.BaiduAPIKey
-	baidu.secretKey = util.BaiduSecretKey
+	baidu.apiKey = cfg.BaiduAPIKey
+	baidu.secretKey = cfg.BaiduSecretKey
 	return baidu
 }
 
