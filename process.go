@@ -49,7 +49,7 @@ func Run() {
 		}
 		fmt.Println(string(out))
 	}
-	fmt.Println("请按空格键开始搜索答案...\n")
+	fmt.Println("\n请按空格键开始搜索答案...")
 
 Loop:
 	for {
@@ -58,7 +58,7 @@ Loop:
 			switch ev.Key {
 			case termbox.KeySpace:
 				answerQuestion(screenshot, cfg)
-				fmt.Println("\n\n请按空格键开始搜索答案...\n")
+				fmt.Println("\n\n请按空格键开始搜索答案...")
 			default:
 				break Loop
 			}
