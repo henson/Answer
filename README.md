@@ -1,7 +1,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/henson/ProxyPool)](https://goreportcard.com/report/github.com/henson/Answer)  [![Travis Status for henson/Answer](https://travis-ci.org/henson/Answer.svg?branch=master)](https://travis-ci.org/henson/Answer)  [![GitHub release](https://img.shields.io/github/release/henson/Answer.svg)](https://github.com/henson/Answer/releases/tag/v1.0)
 
 # Answer
-答题助手，适用于 百万英雄 / 芝士超人 / 冲顶大会 / 花椒百万赢家 等多个直播答题类 APP，支持 iOS、Android 手机和模拟器，3 秒出结果，可以自动答题。
+答题助手，适用于 百万英雄 / 芝士超人 / 冲顶大会 / 花椒百万赢家 等多个直播答题类 APP，支持 iOS、Android 手机和模拟器，3 秒出结果。
 
 ![](/doc/1.png)
 
@@ -26,7 +26,6 @@
 - 全面覆盖百万英雄/芝士超人/冲顶大会/花椒百万赢家等多个直播答题类APP
 - 优化搜索逻辑保证高正确率
 - 多维度参考值，答案交叉验证
-- 自动答题（目前仅支持Android）
 
 ## 更新日志
 
@@ -34,7 +33,6 @@
   - 加入搜狗汪仔答题助手的结果
 - 2018.01.20
   - 改进 ABD 手机截屏获取方式，提高速度
-  - 增加 Android 自动答题功能
   - 题目和选项一次截取识别
 - 2018.01.18
   - 增加知识图谱结果
