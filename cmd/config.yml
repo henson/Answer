@@ -1,13 +1,13 @@
 # 西瓜视频 夜神模拟器
 debug: false
 # 游戏名称, xigua西瓜视频/cddh冲顶大会/huajiao花椒/zscr芝士超人
-app: cddh
+app: xigua
 # 是否模拟自动答题
 automatic: false
 # 对应的设备类型：ios or android
 device: android
 # 使用的ocr工具：baidu or tesseract
-ocr: tesseract
+ocr: baidu
 # android 连接地址
 # 若为安卓真机，打开 USB 调试模式，终端输入 adb devices ，显示设备号则表示成功，如下例子：
 # List of devices attached
@@ -28,7 +28,7 @@ xg_q_y: 240
 xg_q_w: 840
 xg_q_h: 180
 xg_a_x: 30
-xg_a_y: 410
+xg_a_y: 440
 xg_a_w: 840
 xg_a_h: 450
 # 冲顶大会
