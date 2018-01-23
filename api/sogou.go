@@ -52,14 +52,16 @@ func Sogou(app string) {
 		body = strings.Replace(body, "\\", "", -1)
 		var x Sogos
 		json.Unmarshal([]byte(body), &x)
-		QInCache, found := c.Get(util.QuestionInCache)
-		if found {
-			if x.Result[1].Title != QInCache.(string) {
-				fmt.Println("=====================搜狗结果===================")
-				fmt.Println(x.Result[1].Title)
-				fmt.Println(x.Result[1].Answers)
-				fmt.Println("\n搜狗推荐答案是【", x.Result[1].Result, "】")
-				c.Set(util.QuestionInCache, x.Result[1].Title, time.Duration(60)*time.Second)
+		if len(x.Result) > 1 {
+			QInCache, found := c.Get(util.QuestionInCache)
+			if found {
+				if x.Result[1].Title != QInCache.(string) {
+					fmt.Println("=====================搜狗结果===================")
+					fmt.Println(x.Result[1].Title)
+					fmt.Println(x.Result[1].Answers)
+					fmt.Println("\n搜狗推荐答案是【", x.Result[1].Result, "】")
+					c.Set(util.QuestionInCache, x.Result[1].Title, time.Duration(60)*time.Second)
+				}
 			}
 		}
 
