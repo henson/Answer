@@ -13,6 +13,7 @@ type Config struct {
 	APP            string `yaml:"app"`
 	Auto           bool   `yaml:"automatic"`
 	Device         string `yaml:"device"`
+	OCR            string `yaml:"ocr"`
 	AdbAddress     string `yaml:"adb_address"`
 	WdaAddress     string `yaml:"wda_address"`
 	BaiduAPIKey    string `yaml:"Baidu_API_Key"`

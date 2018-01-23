@@ -10,6 +10,14 @@ type Ocr interface {
 	GetText(imgPath string) (string, error)
 }
 
+//NewOcr 使用哪种ocr识别
+func NewOcr(cfg *util.Config) Ocr {
+	if cfg.OCR == "tesseract" {
+		return ocr.NewTesseract()
+	}
+	return ocr.NewBaidu(cfg)
+}
+
 func tesseractOCR() Ocr {
 	return ocr.NewTesseract()
 }

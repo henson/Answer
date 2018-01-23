@@ -77,7 +77,7 @@ func answerQuestion(sc Screenshot, cfg *util.Config) {
 	imgChan2 := make(chan string, 1)
 	qchan1 := make(chan string, 1)
 	qchan2 := make(chan string, 1)
-
+	ocr := NewOcr(cfg)
 	go func() {
 		go func() {
 			api.Sogou(cfg.APP)
@@ -88,7 +88,7 @@ func answerQuestion(sc Screenshot, cfg *util.Config) {
 	go func() {
 		defer wig.Done()
 		//qText, err := tesseractOCR().GetText(util.QuestionImage)
-		qText, err := tesseractOCR().GetText(<-imgChan1)
+		qText, err := ocr.GetText(<-imgChan1)
 		if err != nil {
 			log.Errorf("识别题目失败，%v", err.Error())
 			return
@@ -100,12 +100,12 @@ func answerQuestion(sc Screenshot, cfg *util.Config) {
 	go func() {
 		defer wig.Done()
 		//answerText, err := baiduOCR().GetText(util.AnswerImage)
-		answerText, err := baiduOCR(cfg).GetText(<-imgChan2)
+		answerText, err := ocr.GetText(<-imgChan2)
 		if err != nil {
 			log.Errorf("识别答案失败，%v", err.Error())
 			return
 		}
-		answerArr = processAnswer(answerText)
+		answerArr = processAnswer(cfg, answerText)
 	}()
 	go func() {
 		defer wig.Done()
@@ -154,7 +154,6 @@ func answerQuestion(sc Screenshot, cfg *util.Config) {
 	fmt.Println("\n最终答案可能是【", finalAnswer, "】")
 	if cfg.Debug {
 		go func() {
-			//自动答题
 			//x, y := PressArea(findSliceIndex(answerArr, finalAnswer), cfg)
 			//Press(x, y)
 			PressEcho(cfg)
@@ -183,23 +182,11 @@ func processQuestion(text string) string {
 	return text
 }
 
-//func is disabled, it only for tesseract
-/* func processAnswerDisabled(text string) []string {
-	text = strings.TrimSpace(strings.Replace(text, " ", "", -1))
-	text = strings.Replace(text, "\r", "", -1)
-	arr := strings.Split(text, "\n\n")
-	//去除空白
-	textArr := []string{}
-	for _, val := range arr {
-		if strings.TrimSpace(val) == "" {
-			continue
-		}
-		textArr = append(textArr, val)
+func processAnswer(cfg *util.Config, text string) []string {
+	if cfg.OCR == "tesseract" {
+		text = strings.TrimSpace(strings.Replace(text, " ", "", -1))
+		text = strings.Replace(text, "\r", "", -1)
 	}
-	return textArr
-} */
-
-func processAnswer(text string) []string {
 	arr := strings.Split(text, "\n")
 	//去除空白
 	textArr := []string{}

@@ -29,6 +29,8 @@
 
 ## 更新日志
 
+- 2018.01.23
+  - 把OCR识别方式分离（[issues/1](https://github.com/henson/Answer/issues/1)）
 - 2018.01.21
   - 加入搜狗汪仔答题助手的结果
 - 2018.01.20
